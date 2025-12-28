@@ -7,6 +7,19 @@ Now this repository is still under development. Next step is to totally comapre 
 
 The version with VIO capability will not release at present but you can try to implement it by yourself. The VIO capability is based on the [XRSLAM](https://github.com/openxrlab/slamtool)
 
+Overall, this repository implements the following constraint objectives:
+$$
+\min_{\mathcal{X}}
+\left(
+\sum_{(i,j)\in \mathcal{C}}
+\left \| \mathbf{r}^{\text{vis}}_{ij} \right\|^2_{\mathbf{\Sigma}^{-1}_{ij}}
++
+\sum_{k}
+\left\| \mathbf{r}^{\text{imu}}_{k,k+1} \right\|^2_{\mathbf{\Sigma}^{-1}_{k}}
++
+\left\| \mathbf{r}^{\text{prior}} \right\|^2_{\mathbf{\Sigma}^{-1}_{\text{prior}}}
+\right)
+$$
 
 ### Performance
 
